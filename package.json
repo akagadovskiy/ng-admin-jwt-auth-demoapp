@@ -1,0 +1,12 @@
+{
+    "scripts": {
+        "start": "node server"
+    },
+    "dependencies": {
+        "json-server": "~0.4.2",
+        "express": "~4.9.5",
+		"body-parser": "~1.13.3",
+		"lowdb": "0.10.2",
+		"jsonwebtoken": "5.0.4"
+    }
+}

@@ -1,0 +1,19 @@
+<div class="container">
+    <form style="max-width: 330px; padding: 15px; margin: 0 auto;" class="form-login" name="loginController.form"  ng-submit="loginController.login()">
+        <h2 class="form-login-heading">Please log in</h2>
+		<div class="alert alert-info" role="alert">
+			<div>Login: admin</div>
+			<div>Password: 123456</div>
+		</div>
+        <div class="form-group">
+            <label for="inputLogin" class="sr-only">Login</label>
+            <input type="text" id="inputLogin" class="form-control" placeholder="Login" ng-model="loginController.data._username" ng-required="true" ng-minlength="3" ng-enter="loginController.login()">
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" ng-model="loginController.data._password" ng-required="true" ng-minlength="4" ng-enter="loginController.login()">
+        </div>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit" ng-disabled="loginController.form.$invalid">Login</button>
+    </form>
+</div>

@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "user": "admin",
+      "pass": "123456",
+      "role": "admin",
+      "iat": 1439969024,
+      "exp": 1440075900
+    },
+    {
+      "id": 2,
+      "user": "user",
+      "pass": "123456",
+      "role": "user"
+    }
+  ]
+}
