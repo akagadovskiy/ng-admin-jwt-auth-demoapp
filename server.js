@@ -69,9 +69,13 @@ server.use(function(req, res, next){
 			return res.status(401).json({ success: false, message: 'Failed to authenticate token.' });
 		  } else {
 			if (decoded.role == 'user') {
-				if (restrictAccess[req.originalUrl.replace(/\//g, '')].indexOf(req.method) != -1) {
-					return res.status(403).json({ success: false, message: 'Access denied.' });
-				}
+					for (var key in restrictAccess) {
+							if (restrictAccess.hasOwnProperty(key)) {
+									if (req.originalUrl.indexOf(key) != -1) {
+											return res.status(403).json({ success: false, message: 'Access denied.' });
+									}
+							}
+					}
 			}
 			
 			req.decoded = decoded;    
